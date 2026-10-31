@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/smallist.css">
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
     <script src="scripts/Course.js" defer></script>
@@ -32,7 +33,7 @@
     </nav>
     <main>
         <h1>Home</h1>
-        <section>
+        <section id="about-me">
             <h2>About Me</h2>
             <p>I am a student of BYU-I Pathways. This is the last class for the Web and Computer Programing Certificate
             </p>
@@ -41,17 +42,15 @@
             <h2>Student Photo</h2>
             <img src="images/eric.webp" alt="Eric Portrait">
         </section>
-        <section>
+        <section id="web-courses">
             <h2>Web Certificate Courses</h2>
-            <ul>
-                <button id="all">All</button>
-                <button id="cse">CSE</button>
-                <button id="wdd">WDD</button>
-                <button>WDD 130</button>
-                <button>WDD 131</button>
-                <button>WDD 231</button>
-            </ul>
-            <p id="course-list">The Total credits for course listed above is 6</p>
+            <div>
+                <button id="all" class="course">All Courses</button>
+                <button id="cse" class="course">CSE Courses</button>
+                <button id="wdd" class="course">WDD Courses</button>
+            </div>
+            <p id="course-credit">The Total credits for course listed below is </p>
+            <ul id="course-list"></ul>
         </section>
     </main>
     <footer>

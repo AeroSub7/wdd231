@@ -8,6 +8,7 @@
         margin: 0 auto;
     }
 
+    /* Hamburger and Navigation */
     header {
         grid-template-columns: 24px auto;
     }
@@ -28,5 +29,41 @@
 
     .navigation a {
         border: none;
+    }
+
+    /* Main */
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    h1 {
+        grid-column: 1/4;
+    }
+
+    #about-me {
+        grid-column: 1/3;
+    }
+
+    section img {
+        width: 85%;
+        height: auto;
+        margin: 1rem;
+    }
+
+    #web-courses {
+        grid-column: 1/4;
+    }
+
+    #web-courses div {
+        display: flex;
+        justify-content: center;
+        column-gap: 2rem;
+        font-size: 1.5rem;
+    }
+
+    #web-courses button {
+        border-radius: 5px;
     }
 }

@@ -77,3 +77,64 @@ const courses = [
         completed: false
     }
 ]
+
+// Course button content
+
+const courseButtons = ["All", "CSE", "WDD"]
+const size = window.matchMedia("(max-width: 38rem)")
+
+function buttonText() {
+    if (size.matches) {
+        courseButtons.forEach((button) => {
+            document.querySelector(`#${button.toLowerCase()}`).innerHTML = button;
+        });
+    }
+    else {
+        courseButtons.forEach((button) => {
+            document.querySelector(`#${button.toLowerCase()}`).innerHTML = `${button} Courses`;
+        });
+    }
+
+}
+
+size.addEventListener("change", buttonText);
+
+// Course list
+
+function courseCard(courseList) {
+    document.querySelector("#course-list").innerHTML = "";
+    let credit = courseList.reduce((total, course) => {
+        return total + course.credits;
+    }, 0);
+    document.querySelector("#course-credit").innerHTML = `The total number of course credit listed below is ${credit}`;
+    courseList.forEach((course) => {
+        let card = document.createElement("li");
+        if (course.completed) {
+            card.textContent = `✔ ${course.subject} ${course.number}`;
+            card.setAttribute("class", "completed");
+        }
+        else {
+            card.textContent = `${course.subject} ${course.number}`;
+            card.setAttribute("class", "not-completed");
+        }
+        document.querySelector("#course-list").appendChild(card);
+    })
+}
+
+const allButton = document.querySelector("#all");
+const cseButton = document.querySelector("#cse");
+const wddButton = document.querySelector("#wdd");
+
+allButton.addEventListener("click", () => {
+    courseCard(courses);
+});
+
+cseButton.addEventListener("click", () => {
+    let cseCourses = courses.filter(course => course.subject == 'CSE');
+    courseCard(cseCourses);
+});
+
+wddButton.addEventListener("click", () => {
+    let wddCourses = courses.filter(course => course.subject == 'WDD');
+    courseCard(wddCourses);
+});
