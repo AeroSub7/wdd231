@@ -1,3 +1,8 @@
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
 /* Header */
 header {
     display: grid;
@@ -83,6 +88,7 @@ main {
 
 h1 {
     margin-left: 10px;
+    font-weight: 600;
 }
 
 section {
