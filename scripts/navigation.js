@@ -1,10 +1,3 @@
-// Footer
-const currentyear = document.querySelector("#currentyear");
-const year = new Date().getFullYear();
-document.getElementById("lastModified").innerHTML = `Last Modification: ${document.lastModified}`;
-currentyear.innerHTML = `${year}`;
-
-
 // Store the selected elements that we are goin to use.
 const navButton = document.querySelector('#ham-btn');
 const navBar = document.querySelector('#nav-bar');
