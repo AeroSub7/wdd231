@@ -1,0 +1,28 @@
+{
+    "familyName": "Skywalker",
+    "moveInDate": 1970,
+    "familyNumber": 4,
+    "visted": true,
+    "familyMembers": [
+        {
+            "name": "Anakin",
+            "gender": "male",
+            "birthdate": "10/10/1930"
+        },
+        {
+            "name": "Padme",
+            "gender": "Female",
+            "birthdate": "10/10/1926"
+        },
+        {
+            "name": "Luke",
+            "gender": "male",
+            "birthdate": "10/10/1955"
+        },
+        {
+            "name": "Leia",
+            "gender": "female",
+            "birthdate": "10/10/1955"
+        }
+    ]
+}
