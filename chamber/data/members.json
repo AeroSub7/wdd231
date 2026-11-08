@@ -1,0 +1,49 @@
+{
+    "companies": [
+        {
+            "name": "Chick-fil-A at Ten Mile",
+            "address": "567 S Innovation Lane, Meridian, ID 83642",
+            "phoneNumber": 2084050075,
+            "url": "https://www.chick-fil-a.com",
+            "image": "images/chick-fil-a-header-logo.svg",
+            "level": 3,
+            "type": "food"
+        },
+        {
+            "name": "El Pollo Loco",
+            "address": "3471 West Chinden Blvd., Suite 100, Meridian, ID 83646",
+            "phoneNumber": 9512069666,
+            "url": "https://www.elpolloloco.com",
+            "image": "images/el-pollo-loco-logo.jpg",
+            "level": 2,
+            "type": "food"
+        },
+        {
+            "name": "Habit burger & Grill",
+            "address": "2206 North Eagle Rd., Meridian, ID 83646",
+            "phoneNumber": 8134606220,
+            "url": "https://www.habitburger.com",
+            "image": "images/habit-logo-2025.svg",
+            "level": 3,
+            "type": "food"
+        },
+        {
+            "name": "McDonald's",
+            "address": "1710 E Fairview Ave, Meridian, ID 83642",
+            "phoneNumber": 2088871565,
+            "url": "https://www.mcdonalds.com/us/en-us.html",
+            "image": "images/arches-logo-108x108.jpg",
+            "level": 1,
+            "type": "food"
+        },
+        {
+            "name": "Mountain Mike's Pizza - Linder",
+            "address": "4610 N Linder Rd, Meridian, ID 83646",
+            "phoneNumber": 2087449900,
+            "url": "https://www.mountainmikespizza.com",
+            "image": "images/mountain-mike's-pizza-logo.svg.webp",
+            "level": 2,
+            "type": "food"
+        }
+    ]
+}
