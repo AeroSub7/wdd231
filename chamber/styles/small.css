@@ -1,0 +1,94 @@
+:root {
+    --primary-color: darkgreen;
+    --secondary-color: darkblue;
+    --background-color: lightblue;
+    --text-color: black;
+    --font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 24px auto 44px 44px;
+    padding: 1rem;
+    column-gap: .5rem;
+    color: var(--primary-color);
+    background-color: var(--background-color);
+
+}
+
+header img {
+    width: 24;
+    height: auto;
+}
+
+.hamburger {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: darkgreen;
+    cursor: pointer;
+}
+
+.hamburger::before {
+    content: "\2630";
+
+}
+
+.hamburger.show::before {
+    content: "\00d7";
+
+}
+
+.moon {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+.navigation {
+    display: none;
+    font-size: 1.5rem;
+}
+
+.navigation.show {
+    display: block;
+}
+
+nav {
+    background-color: var(--background-color);
+    padding: .5rem;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+main {
+    padding: .5rem;
+}
+
+main .buttons {
+    justify-self: center;
+    padding: 1rem;
+    margin: .5rem;
+}
+
+main .buttons button {
+    margin: .5rem;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    color: var(--primary-color);
+    background-color: var(--background-color);
+    padding: 1rem;
+}

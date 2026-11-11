@@ -18,33 +18,57 @@
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
     <script src="scripts/date.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
 </head>
 
 <body>
     <header>
-        <img src="images/favicon.ico" alt="Site Logo" width="512" height="512">
+        <img src="images/favicon.ico" alt="Site Logo" width="24" height="24">
         <span>Meridian Chamber of Commerce</span>
+
         <button id="ham-btn" class="hamburger" aria-label="Navigation Menu"></button>
-        <button id="dark-light" class="moon">◐</button>
+        <button id="dark-light" class="moon" aria-label="Dark Mode">◐</button>
     </header>
-    <nav></nav>
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Discover</a></li>
+            <li class="current"><a href="#" aria-current="page">Directory</a></li>
+            <li><a href="#">Join</a></li>
+        </ul>
+    </nav>
     <main>
         <h1>Directory</h1>
-        <button id="grid-button">Grid</button><button id="list-button">List</button>
-        <div id="show-area"></div>
+        <div class="buttons">
+            <button id="grid-button">Grid</button><button id="list-button">List</button>
+        </div>
+        <article id="show-area"></article>
     </main>
     <footer>
-        <div>
+        <div class="contact">
             <p>Meridian Chamber of Commerce</p>
             <P>10 Rue De La Paix</P>
             <p>Meridian, Idaho 83642</p>
             <p>info@meridiancc.org</p>
             <p>(223) 555-2300</p>
         </div>
-        <p>WDD 231 Class Project</p>
-        <p>🏭 Eric Johnson 🏭</p>
-        <p>©<span id="currentyear"></span> Meridian Chamber of Commerce, Idaho, USA</p>
-        <p id="lastModified"></p>
+        <div class="social-media">
+            <a href="https://github.com/AeroSub7/wdd231"><img src="images/github.svg" alt="Github Profile" width="48"
+                    height="48"></a>
+            <a href="www.linkedin.com/in/eric-johnson-2b090284"><img src="images/linkedin.svg" alt="Linkedin Profile"
+                    width="48" height="48"></a>
+            <a
+                href="https://teams.microsoft.com/l/channel/19%3A796ed8b2d45a483eab0889dd1f4e4b23%40thread.tacv2/WDD%20231%20Team%2003%20-%20Wednesdays%201700%20UTC?groupId=c0d7c79e-0760-43b8-b6b8-b764e11ff74a&tenantId=42804ae1-d2e9-40b7-a4a3-45811234298b"><img
+                    src="images/microsoft-teams.svg" alt="Teams Group" width="48" height="48"></a>
+            <a href="www.youtube.com/aerosub3896"><img src="images/youtube.svg" alt="Youtube Profile" width="48"
+                    height="48"></a>
+        </div>
+        <div>
+            <p>WDD 231 Class Project</p>
+            <p>🏭 Eric Johnson 🏭</p>
+            <p>©<span id="currentyear"></span> Meridian Chamber of Commerce, Idaho, USA</p>
+            <p id="lastModified"></p>
+        </div>
     </footer>
 </body>
 
