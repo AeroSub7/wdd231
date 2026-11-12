@@ -8,5 +8,3 @@ navButton.addEventListener('click', () => {
     navButton.setAttribute('aria-expanded', isOpen);
     navBar.classList.toggle('show')
 })
-
-const childElement
