@@ -22,6 +22,15 @@
         padding: 1rem;
     }
 
+    /* Grid */
+
+    /* main article {
+        display: grid;
+        grid-template-columns: repeat (auto-fit, minmax(250px, 1fr));
+        grid-gap: 5px;
+        align-items: center;
+    } */
+
     footer {
         display: grid;
         grid-template-columns: 1.5fr 1fr 1.5fr;

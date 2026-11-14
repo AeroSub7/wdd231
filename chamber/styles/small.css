@@ -45,6 +45,7 @@ header img {
     font-size: 2rem;
     color: var(--primary-color);
 }
+
 .navigation {
     display: none;
     font-size: 1.5rem;
@@ -83,6 +84,37 @@ main .buttons {
 
 main .buttons button {
     margin: .5rem;
+}
+
+/* Grid */
+main article {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 5px;
+    align-items: center;
+}
+
+main section {
+    display: block;
+    background-color: var(--background-color);
+    border-radius: 5px;
+    padding: .5rem;
+    text-align: center;
+    margin: 0;
+}
+
+section img {
+    width: 100px;
+    height: auto;
+    margin: 1rem;
+}
+
+h2 {
+    display: block;
+}
+
+section p {
+    display: block;
 }
 
 footer {
