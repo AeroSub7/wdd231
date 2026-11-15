@@ -21,7 +21,8 @@
         color: white;
     }
 
-    main button {
+    .hamburger,
+    .moon {
         color: var(--text-color);
         background-color: var(--background-color);
     }
@@ -137,7 +138,7 @@ section img {
     margin: 1rem;
 }
 
-h2 {
+section h2 {
     display: block;
 }
 
