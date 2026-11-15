@@ -14,7 +14,7 @@
             "address": "3471 West Chinden Blvd., Suite 100, Meridian, ID 83646",
             "phoneNumber": 9512069666,
             "url": "https://www.elpolloloco.com",
-            "image": "./images/el-pollo-loco-logo.jpg",
+            "image": "./images/el-pollo-loco.svg",
             "level": 2,
             "type": "food"
         },
@@ -32,7 +32,7 @@
             "address": "1710 E Fairview Ave, Meridian, ID 83642",
             "phoneNumber": 2088871565,
             "url": "https://www.mcdonalds.com/us/en-us.html",
-            "image": "./images/arches-logo-108x108.jpg",
+            "image": "./images/mcdonalds-golden-arches.svg.webp",
             "level": 1,
             "type": "food"
         },

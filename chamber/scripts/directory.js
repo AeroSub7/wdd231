@@ -22,11 +22,14 @@ const displayCompanies = (companies) => {
         let address = document.createElement("p");
         let phoneNumber = document.createElement("p");
         let logo = document.createElement("img");
+        let website = document.createElement("a");
         let level = company.level;
         let type = company.type;
         name.innerHTML = company.name;
         address.innerHTML = company.address;
         phoneNumber.innerHTML = `Phone Number: ${company.phoneNumber}`;
+        website.innerHTML = company.url;
+        website.setAttribute("href", company.url);
         logo.setAttribute("src", `${company.image}`);
         logo.setAttribute("alt", `logo of ${company.name}`);
         logo.setAttribute("loading", "lazy");
@@ -37,6 +40,7 @@ const displayCompanies = (companies) => {
         card.appendChild(logo);
         card.appendChild(address);
         card.appendChild(phoneNumber);
+        card.appendChild(website);
         if (level == 1) {
 
         }
@@ -46,3 +50,15 @@ const displayCompanies = (companies) => {
     });
 }
 getCompanyData();
+
+// Change to List
+const gridButton = document.querySelector('#grid-button');
+const listButton = document.querySelector('#list-button');
+
+gridButton.addEventListener("click", () => {
+    cards.classList.remove("list");
+})
+
+listButton.addEventListener("click", () => {
+    cards.classList.add("list");
+})
