@@ -72,6 +72,11 @@ header span {
     border-bottom: solid 1px #ddd;
 }
 
+.navigation a:active {
+    color: black;
+    transform: scale(.9);
+}
+
 .navigation li.current {
     background-color: #eee;
 }

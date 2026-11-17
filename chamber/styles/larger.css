@@ -15,11 +15,17 @@
 
     nav ul {
         flex-direction: row;
-        column-gap: .5rem;
+        column-gap: 2cap;
+        margin: 0 auto;
+        padding-bottom: .5rem;
     }
 
     nav {
-        padding: 1rem;
+        padding: 0;
+    }
+
+    .navigation {
+        display: block;
     }
 
     /* Grid */
