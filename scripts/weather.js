@@ -9,7 +9,7 @@ async function apiFetch() {
         if (response.ok) {
             const data = await response.json();
             console.log(data);
-            displayResults(data.weather, data.main);
+            displayResults(data.weather[0], data.main);
         }
         else {
             throw new Error(`request failed with status ${response.status}`);
@@ -24,6 +24,7 @@ apiFetch();
 function displayResults(weatherdata, maindata) {
     currentTemp.innerHTML = maindata.temp;
     let weatherIconurl = `https://openweathermap.org/img/wn/${weatherdata.icon}@2x.png`;
+
     weatherIcon.setAttribute("src", `${weatherIconurl}`);
     captionDesc.innerText = weatherdata.description;
     weatherIcon.setAttribute("alt", `${weatherdata.description} Icon`);
