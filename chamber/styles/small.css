@@ -8,6 +8,10 @@
     --shadow-color: rgba(0, 0, 0, 0.2);
 }
 
+* {
+    box-sizing: border-box;
+}
+
 /* darkmode */
 
 .dark-mode {
@@ -147,7 +151,7 @@ main section {
     padding: .5rem;
     text-align: center;
     margin: 0;
-    min-height: 325px;
+    min-height: 340px;
 }
 
 section img {
@@ -180,6 +184,7 @@ section a {
         text-align: start;
         height: auto;
         min-height: fit-content;
+        align-items: center;
     }
 
     &>* {
@@ -197,6 +202,7 @@ section a {
     &:nth-child(even) {
         background-color: var(--background-color);
     }
+
 }
 
 
