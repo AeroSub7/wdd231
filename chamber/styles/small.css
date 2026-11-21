@@ -129,7 +129,7 @@ nav a:hover {
 }
 
 main {
-    padding: .5rem;
+    padding: 0;
 }
 
 main .buttons {
@@ -142,6 +142,42 @@ main .buttons button {
     margin: .5rem;
 }
 
+section {
+    display: block;
+    background-color: var(--background-color);
+    border-radius: 5px;
+    padding: .5rem;
+    margin: .5rem;
+}
+
+/* Hero Banner */
+
+.hero {
+
+    display: block;
+    left: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+.hero-img {
+    display: block;
+    height: auto;
+    width: 100%;
+    top: 0;
+    display: block;
+
+}
+
+.join {
+    margin: .5rem auto;
+    font-size: 2rem;
+    justify-self: center;
+    display: block;
+    color: var(--primary-color);
+    background-color: var(--background-color);
+}
+
 /* Grid */
 
 main article {
@@ -151,17 +187,16 @@ main article {
     align-items: center;
 }
 
-main section {
-    display: block;
-    background-color: var(--background-color);
-    border-radius: 5px;
-    padding: .5rem;
+.gold,
+.silver,
+.non-profit {
+
     text-align: center;
     margin: 0;
     min-height: 340px;
 }
 
-section img {
+.card img {
     width: 100px;
     height: auto;
     margin: 1rem;
@@ -169,6 +204,7 @@ section img {
 
 section h2 {
     display: block;
+    color: var(--primary-color);
 }
 
 section p {

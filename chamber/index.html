@@ -20,8 +20,9 @@
     <link rel="stylesheet" href="./styles/larger.css">
     <script src="./scripts/date.js" defer></script>
     <script src="./scripts/navigation.js" defer></script>
-    <script src="./scripts/directory.js" defer></script>
     <script src="./scripts/darkscreen.js" defer></script>
+    <script type="module" src="./scripts/spotlight.mjs"></script>
+    <script type="module" src="./scripts/weather.mjs"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,13 +47,32 @@
             <li><a href="./join.html">Join</a></li>
         </ul>
     </nav>
-    <main>
+    <main class="home-page">
+        <section class="hero"><img src="./images/meridian-idaho-large.webp" alt="Hero Banner" class="hero-img"
+                srcset="./images/meridian-idaho-small.webp 430w, ./images/meridian-idaho-large.webp 900w"
+                sizes="(max-width: 430px) 430px, 900px"></section>
         <h1>Meridian Chamber of Commerce</h1>
-        <section>news banner</section>
-        <section></section>
-        <section></section>
-        <section></section>
-        <section></section>
+        <section class="current-events">
+            <h2>Current Events</h2>
+            <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda odit magnam atque, repellendus in
+                error ullam architecto, maxime deleniti asperiores ducimus, ipsa minima! Sequi ipsa consequuntur
+                voluptate ratione, assumenda ad.</P>
+        </section>
+        <section class="spotlights">
+            <h2>Spotlights</h2>
+            <div id="spotlights">
+            </div>
+        </section>
+        <section class="weather">
+            <h2>Weather</h2>
+            <p>Current temperature: <span id="current-temp"></span>°F</p>
+            <figure>
+                <img id="weather-icon" src="" alt="">
+                <figcaption></figcaption>
+            </figure>
+            <div id="forecast"></div>
+        </section>
+        <button class="join" id="join">Join Us</button>
     </main>
     <footer>
         <div class="contact">

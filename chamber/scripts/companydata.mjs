@@ -1,21 +1,17 @@
-// const companiesurl = 'https://aerosub7.github.io/wdd231/chamber/data/members.json';
-const companiesurl = './data/members.json'
-const cards = document.querySelector('#show-area');
-
-async function getCompanyData() {
+export async function getCompanyData(companiesurl) {
     try {
         const response = await fetch(companiesurl);
         if (!response.ok) {
             throw new Error(`request failed with status ${response.status}`);
         }
         const data = await response.json();
-        displayCompanies(data.companies);
+        return data;
     } catch (error) {
         console.error(error);
     }
-}
+};
 
-const displayCompanies = (companies) => {
+export function displayCompanies(companies, cards) {
     companies.forEach((company) => {
         let card = document.createElement("section");
         let name = document.createElement("h2");
@@ -41,24 +37,18 @@ const displayCompanies = (companies) => {
         card.appendChild(address);
         card.appendChild(phoneNumber);
         card.appendChild(website);
-        if (level == 1) {
 
+        card.setAttribute("class", "card");
+        if (level == 3) {
+            card.classList.add("gold");
         }
-
+        else if (level == 2) {
+            card.classList.add("silver");
+        }
+        else if (level == 1) {
+            card.classList.add("non-profit");
+        }
 
         cards.appendChild(card);
     });
-}
-getCompanyData();
-
-// Change to List
-const gridButton = document.querySelector('#grid-button');
-const listButton = document.querySelector('#list-button');
-
-gridButton.addEventListener("click", () => {
-    cards.classList.remove("list");
-})
-
-listButton.addEventListener("click", () => {
-    cards.classList.add("list");
-})
+};
