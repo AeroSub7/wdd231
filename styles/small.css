@@ -170,6 +170,23 @@ section img {
     background-color: #ccc;
 }
 
+/* dialog */
+
+dialog {
+    padding: 1rem;
+    max-width: 50ch;
+    border: 0;
+    box-shadow: 0 0 1rem rgb(0 0 0 / 40%);
+}
+
+&::backdrop {
+    background: rgb(0 0 0);
+}
+
+dialog[open] {
+    background-color: black;
+}
+
 /* Footer */
 footer {
     background-color: #eee;
