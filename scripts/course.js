@@ -118,6 +118,10 @@ function courseCard(courseList) {
             card.setAttribute("class", "not-completed");
         }
         document.querySelector("#course-list").appendChild(card);
+        card.addEventListener("click", () => {
+            courseDetails(course);
+            dialog.showModal();
+        })
     })
 }
 
@@ -137,4 +141,49 @@ cseButton.addEventListener("click", () => {
 wddButton.addEventListener("click", () => {
     let wddCourses = courses.filter(course => course.subject == 'WDD');
     courseCard(wddCourses);
+});
+
+// dialog
+
+const dialogInside = document.querySelector('#course-details');
+const dialogClose = document.querySelector('#close');
+const dialog = document.querySelector('dialog');
+
+function courseDetails(course) {
+    dialog.appendChild(dialogClose);
+    dialogInside.innerHTML = '';
+
+    let courseTitle = document.createElement("h2");
+    let courseHead = document.createElement("h3");
+    let creditAmount = document.createElement("p");
+    let courseCertificate = document.createElement("p");
+    let courseDescription = document.createElement("p");
+    let courseTechnology = document.createElement("p");
+    let group = document.createElement("div");
+
+    courseTitle.innerHTML = `${course.subject} ${course.number}`;
+    courseHead.innerHTML = `${course.title}`;
+    creditAmount.innerHTML = `${course.credits} credits`;
+    courseCertificate.innerHTML = `Certificate: ${course.certificate}`;
+    courseDescription.innerHTML = `${course.description}`;
+    courseTechnology.innerHTML = `Technology: ${course.technology}`;
+    group.appendChild(courseTitle);
+    group.appendChild(dialogClose);
+
+    dialogInside.appendChild(group);
+    dialogInside.appendChild(courseHead);
+    dialogInside.appendChild(creditAmount);
+    dialogInside.appendChild(courseCertificate);
+    dialogInside.appendChild(courseDescription);
+    dialogInside.appendChild(courseTechnology);
+}
+
+dialogClose.addEventListener("click", () => {
+    dialog.close();
+});
+
+dialog.addEventListener('click', (event) => {
+    if (event.target === dialog) {
+        dialog.close();
+    }
 });
